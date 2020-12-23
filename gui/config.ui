@@ -78,6 +78,9 @@
       <property name="text">
        <string>Folder</string>
       </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
      </widget>
     </item>
     <item>
@@ -115,6 +118,12 @@
     </item>
     <item>
      <widget class="QRadioButton" name="formatWebp">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>25</height>
+       </size>
+      </property>
       <property name="text">
        <string>.webp</string>
       </property>
@@ -122,6 +131,12 @@
     </item>
     <item>
      <widget class="QRadioButton" name="formatIco">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>25</height>
+       </size>
+      </property>
       <property name="text">
        <string>.ico</string>
       </property>
@@ -129,6 +144,12 @@
     </item>
     <item>
      <widget class="QRadioButton" name="formatJpeg">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>25</height>
+       </size>
+      </property>
       <property name="text">
        <string>.jpeg</string>
       </property>
@@ -136,6 +157,12 @@
     </item>
     <item>
      <widget class="QRadioButton" name="formatPng">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>25</height>
+       </size>
+      </property>
       <property name="text">
        <string>.png</string>
       </property>

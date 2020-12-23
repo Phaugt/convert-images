@@ -155,15 +155,23 @@ class Config(QWidget):
         UIFile.open(QFile.ReadOnly)
         uic.loadUi(UIFile, self)
         UIFile.close()
+
         self.newFolderPath.setText(config.get("saveLocation"))
         self.saveExit.clicked.connect(self.saveExitConfig)
+        self.saveExit.setStatusTip("Save and Exit")
         self.save.clicked.connect(self.saveConfig)
+        self.save.setStatusTip("Save")
         self.changeOutputFolder.clicked.connect(self.changeSavedFolder)
+        self.changeOutputFolder.setStatusTip("Change the save folder for the newly converted images")
 
         self.formatWebp.toggled.connect(self.pickSaveFormat)
+        self.formatWebp.setStatusTip("Select .webp (saves alot of space)")
         self.formatIco.toggled.connect(self.pickSaveFormat)
+        self.formatIco.setStatusTip("Convert the image to an .ico file with 256x256 px size!")
         self.formatJpeg.toggled.connect(self.pickSaveFormat)
+        self.formatJpeg.setStatusTip("Select .jpeg")
         self.formatPng.toggled.connect(self.pickSaveFormat)
+        self.formatPng.setStatusTip("Select .png")
     
     def reloadSettings(self):
         """reload settings"""
@@ -227,8 +235,6 @@ class Config(QWidget):
         fixfoldName = foldName + "/"
         if fixfoldName:
             self.newFolderPath.setText(fixfoldName)
-    
-
 
 app = QApplication(sys.argv)
 app.setWindowIcon(QIcon(logo))
