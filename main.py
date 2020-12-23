@@ -31,10 +31,16 @@ configGui = resource_path("./gui/config.ui")
 try:
     saveLocation = config.get("saveLocation")
     saveAs = config.get("saveFormat")
+    if saveLocation or saveAs == "":
+        saveLocation = userfold+'\\pictures\\'
+        config.set("saveLocation", str(saveLocation))
+        config.set("saveFormat", 'webp')
+        config.save()
 except FileNotFoundError:
     pass
 
 class GUI(QMainWindow):
+    """main window used by the application"""
     def __init__(self):
         super(GUI, self).__init__()
         UIFile = QFile(guifile)
@@ -71,6 +77,7 @@ class GUI(QMainWindow):
         menubar.setNativeMenuBar(False)
 
     def informationMessage(self,message):
+        """send message to messagebox"""
         msgBox = QMessageBox()
         msgBox.setIcon(QMessageBox.Warning)
         msgBox.setWindowTitle("Information")
@@ -78,6 +85,7 @@ class GUI(QMainWindow):
         msgBox.exec()
         
     def showSettings(self):
+        """call the settings widget"""
         self.c.show()
 
     def dragEnterEvent(self, event):
