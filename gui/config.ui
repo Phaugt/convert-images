@@ -62,6 +62,9 @@
     </item>
     <item>
      <widget class="QLabel" name="folderText">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(238, 238, 238);</string>
+      </property>
       <property name="text">
        <string>Change output folder for the new images:</string>
       </property>
@@ -74,6 +77,9 @@
         <width>0</width>
         <height>25</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">gridline-color: rgb(255, 211, 105);</string>
       </property>
       <property name="text">
        <string>Folder</string>
@@ -90,6 +96,9 @@
         <width>0</width>
         <height>25</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(238, 238, 238);</string>
       </property>
       <property name="readOnly">
        <bool>true</bool>
@@ -111,6 +120,9 @@
     </item>
     <item>
      <widget class="QLabel" name="formatText">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(238, 238, 238);</string>
+      </property>
       <property name="text">
        <string>Format for the new picture:</string>
       </property>
@@ -123,6 +135,9 @@
         <width>0</width>
         <height>25</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(238, 238, 238);</string>
       </property>
       <property name="text">
        <string>.webp</string>
@@ -137,6 +152,9 @@
         <height>25</height>
        </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(238, 238, 238);</string>
+      </property>
       <property name="text">
        <string>.ico</string>
       </property>
@@ -150,6 +168,9 @@
         <height>25</height>
        </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(238, 238, 238);</string>
+      </property>
       <property name="text">
        <string>.jpeg</string>
       </property>
@@ -162,6 +183,9 @@
         <width>0</width>
         <height>25</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(238, 238, 238);</string>
       </property>
       <property name="text">
        <string>.png</string>
@@ -191,6 +215,9 @@
           <height>25</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">gridline-color: rgb(255, 211, 105);</string>
+        </property>
         <property name="text">
          <string>Save</string>
         </property>
@@ -204,6 +231,9 @@
           <height>25</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">gridline-color: rgb(255, 211, 105);</string>
+        </property>
         <property name="text">
          <string>Save &amp;&amp; Exit</string>
         </property>
@@ -213,6 +243,24 @@
     </item>
    </layout>
   </widget>
+  <widget class="QLabel" name="setbg">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>252</width>
+     <height>322</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(57, 62, 70);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>setbg</zorder>
+  <zorder>verticalLayoutWidget_2</zorder>
  </widget>
  <resources/>
  <connections/>

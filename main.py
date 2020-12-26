@@ -56,7 +56,8 @@ class GUI(QMainWindow):
         self.image.setText('\n\n Drop Image Here \n\n')
         self.image.setStyleSheet('''
             QLabel{
-                border: 4px dashed #aaa
+                border: 4px dashed #aaa;
+                color: #eeeeee
             }
             ''')
         self.btnconvertImage.clicked.connect(self.convertImage)
@@ -117,7 +118,7 @@ class GUI(QMainWindow):
     def set_image(self, file_path):
         """set the image as pixmap in the label and scale it """
         pixmap = QPixmap(file_path)
-        scaled = pixmap.scaled(631,420,Qt.KeepAspectRatio)
+        scaled = pixmap.scaled(631,390,Qt.KeepAspectRatio)
         self.image.setPixmap(scaled)
 
     def convertImage(self):
